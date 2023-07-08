@@ -3,7 +3,9 @@
 //
 #include "global.h"
 
-string reverseVowels(string s){
+using namespace std;
+
+string Solution::reverseVowels(string s){
     vector<int> vowels_s;
     unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
     for(char num : s){
@@ -30,4 +32,26 @@ string reverseVowels(string s){
         i++;
     }
     return s;
+}
+
+bool Solution::isPalindrome(string s){
+    vector<char> processed;
+    for(char num : s){
+        if(isalpha(num)){
+            processed.push_back(tolower(num));
+        }
+    }
+    int left = 0;
+    int right = processed.size() - 1;
+    for(char num : processed){
+        cout << num << " ";
+    }
+    while(left < right){
+        if(processed[left] != processed[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
 }
