@@ -88,3 +88,42 @@ bool Solution::isAnagram(std::string s, std::string t){
     }
     return true;
 }
+
+//Given an array of strings words and two different strings that already exist in the array word1 and word2,
+//return the shortest distance between these two words in the list.
+//Input: words = ["a", "c", "d", "b", "a"], word1 = "a", word2 = "b"
+//Output: 1
+//Explanation: The shortest distance between "a" and "b" is 1 word. Please note that "a" appeared twice.
+int Solution::shortestDistance(vector<string>& words, string word1, string word2){
+    vector<int> index1;
+    vector<int> index2;
+    int index = 0;
+    for(string num : words){
+        if(num == word1){
+            index1.push_back(index);
+        }
+        if(num == word2){
+            index2.push_back(index);
+        }
+        index++;
+    }
+    int sd;
+    int sdt;
+    sd = abs(index1[0] - index2[0]);
+    int i = 0;
+    for(int num1 : index1){
+        int j = 0;
+        for(int num2 : index2){
+            sdt = abs(index1[i] - index2[j]);
+            if(sdt < sd){
+                sd = sdt;
+            }
+            j++;
+        }
+        i++;
+    }
+    return sd;
+}
+
+
+

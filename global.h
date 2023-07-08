@@ -17,6 +17,7 @@ class Solution{
     string reverseVowels(string s);
     bool isPalindrome(string s);
     bool isAnagram(std::string s, std::string t);
+    int shortestDistance(vector<string>& words, string word1, string word2);
 };
 
 #endif //GROKKING_GLOBAL_H
