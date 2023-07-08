@@ -16,7 +16,7 @@ class Solution{
     public:
     string reverseVowels(string s);
     bool isPalindrome(string s);
-
+    bool isAnagram(std::string s, std::string t);
 };
 
 #endif //GROKKING_GLOBAL_H

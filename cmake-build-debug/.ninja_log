@@ -1,0 +1,13 @@
+# ninja log v5
+0	409	7104810072665730	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+3	376	7104811134823187	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+376	456	7104811135603361	grokking.exe	bd7d82724a7de86a
+3	383	7104811245949659	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+2	388	7104812010748812	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+2	386	7104818222902537	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+3	432	7104828236848963	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+433	521	7104828237699156	grokking.exe	bd7d82724a7de86a
+2	424	7104828574194052	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+425	515	7104828575084259	grokking.exe	bd7d82724a7de86a
+3	433	7104828928488119	CMakeFiles/grokking.dir/main.cpp.obj	daf8e52ca7e9e4f8
+434	524	7104828929378326	grokking.exe	bd7d82724a7de86a

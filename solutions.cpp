@@ -37,8 +37,12 @@ string Solution::reverseVowels(string s){
 bool Solution::isPalindrome(string s){
     vector<char> processed;
     for(char num : s){
-        if(isalpha(num)){
+        if(isalpha(num) || (num >= 48 && num <= 57)){
+            if(isalpha(num)){
             processed.push_back(tolower(num));
+        }else{
+                processed.push_back(num);
+            }
         }
     }
     int left = 0;
@@ -52,6 +56,35 @@ bool Solution::isPalindrome(string s){
         }
         left++;
         right--;
+    }
+    return true;
+}
+
+//Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+//
+//An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+//typically using all the original letters exactly once.
+
+bool Solution::isAnagram(std::string s, std::string t){
+    unordered_set<char> s_;
+    unordered_set<char> t_;
+
+    for(char num : s){
+        s_.insert(num);
+    }
+
+    for(char num : t){
+        t_.insert(num);
+    }
+
+    if(s_.size() != t_.size() || s.size() != t.size()){
+        return false;
+    }
+
+    for(char num : s_){
+        if(t_.find(num) == t_.end()){
+            return false;
+        }
     }
     return true;
 }
