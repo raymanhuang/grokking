@@ -10,6 +10,7 @@
 #include <vector>
 #include <cstdlib>
 #include <unordered_set>
+#include <map>
 
 using namespace std;
 class Solution{
@@ -18,6 +19,7 @@ class Solution{
     bool isPalindrome(string s);
     bool isAnagram(std::string s, std::string t);
     int shortestDistance(vector<string>& words, string word1, string word2);
+    int numGoodPairs(std::vector<int>& nums);
 };
 
 #endif //GROKKING_GLOBAL_H

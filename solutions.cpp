@@ -125,5 +125,31 @@ int Solution::shortestDistance(vector<string>& words, string word1, string word2
     return sd;
 }
 
+//Given an array of integers nums, return the number of good pairs.
+//
+//A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+//Input: nums = [1,2,3,1,1,3]
+//Output: 4
+//Explanation: There are 4 good pairs, here are the indices: (0,3), (0,4), (3,4), (2,5).
+int Solution::numGoodPairs(std::vector<int>& nums){
+    int gp = 0;
+    map<int, int> m;
+    int i = 0;
+    for(int num : nums){
+        if(m.find(num) != m.end()){
+            m.insert(make_pair(num, 1));
+        }else{
+            m[num]+=1;
+        }
+    }
+    for(const auto& pair : m){
+        int p = 0;
+        for(int i = 1; i < pair.second; i++){
+            p += i;
+        }
+        gp += p;
+    }
+    return gp;
+}
 
 
