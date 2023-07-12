@@ -152,4 +152,26 @@ int Solution::numGoodPairs(std::vector<int>& nums){
     return gp;
 }
 
-
+//Given an array of numbers sorted in ascending order and a target sum,
+//find a pair in the array whose sum is equal to the given target.
+//
+//Write a function to return the indices of the two numbers (i.e. the pair)
+//such that they add up to the given target.
+vector<int> Solution::search(const vector<int> &arr, int targetSum) {
+    // TODO: Write your code here
+    int left = 0;
+    int right = arr.size() - 1;
+    while(left < right){
+        if(arr[left] + arr[right] == targetSum){
+            break;
+        }else if(arr[left] + arr[right] < targetSum){
+            left++;
+        }else{
+            right--;
+        }
+    }
+    vector<int> answer;
+    answer.push_back(left);
+    answer.push_back(right);
+    return answer;
+}

@@ -20,6 +20,7 @@ class Solution{
     bool isAnagram(std::string s, std::string t);
     int shortestDistance(vector<string>& words, string word1, string word2);
     int numGoodPairs(std::vector<int>& nums);
+    vector<int> search(const vector<int> &arr, int targetSum);
 };
 
 #endif //GROKKING_GLOBAL_H
