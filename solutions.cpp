@@ -173,5 +173,6 @@ vector<int> Solution::search(const vector<int> &arr, int targetSum) {
     vector<int> answer;
     answer.push_back(left);
     answer.push_back(right);
+
     return answer;
 }
