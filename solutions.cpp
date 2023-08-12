@@ -176,3 +176,43 @@ vector<int> Solution::search(const vector<int> &arr, int targetSum) {
 
     return answer;
 }
+//
+//Given an array of sorted numbers, remove all duplicate number instances from
+//it in-place, such that each element appears only once. The relative order
+//of the elements should be kept the same and you should not use any extra
+//space so that the solution has a space complexity of O(1)
+//
+//Move all the unique elements at the beginning of the array
+//and after moving return the length of the subarray that has no duplicate in it.
+int Solution::remove(vector<int> &arr){
+  int k = 1;
+  for(int i = 0; i < arr.size() - 1; i++){
+      if(arr[i] != arr[i+1]){
+          arr[k] = arr[i+1];
+          k+=1;
+      }
+  }
+  return k;
+}
+
+//Given a sorted array, create a new array containing squares of all
+//the numbers of the input array in the sorted order.
+vector<int> Solution::makeSquares(vector<int> &arr){
+    vector<int> squares(arr.size());
+    int right = arr.size() - 1;
+    int left = 0;
+    int i = arr.size() - 1;
+    while(right >= left) {
+        int sR = arr[right] * arr[right];
+        int sL = arr[left] * arr[left];
+        if(sR >= sL) {
+            squares[i] = sR;
+            right--;
+        } else {
+            squares[i] = sL;
+            left++;
+        }
+        i--;
+    }
+    return squares;
+}
